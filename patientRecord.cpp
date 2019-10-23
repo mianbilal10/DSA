@@ -1,15 +1,21 @@
+//By: Mian Bilal -> mianbilal10
+/* This is a Patient waiting room management system*/
+//In this program we are using Queue Data Structure.
+//We have used Bubble sort algorithm for sorting puposes.
+//C++ OOP concepts are used to solve problem.
+
 #include <iostream>
 #include <algorithm>
 #include <iterator>
 #include <string>
 using namespace std;
-#define size 6 // size of array 
+#define size 5 // size of array
 
 class PatientRecord{
 private:
-	int id[size];
+	int id[size];//array for storing patient ids assigned by program itself
 	int front = -1, rear = -1,count=0;
-	string names[size];
+	string names[size];//Inputs and stores names of registered patients
 
 public:
 	bool isEmpty()//check for queue
@@ -28,14 +34,14 @@ public:
 			return false;
 	}
 
-
+// method for registering patients
 	void registerPatient()
 	{
 		if (isFull()){
 			cout << "Registration is closed!" << endl;
 			return;
 		}
-			
+
 
 		else
 		{
@@ -54,7 +60,7 @@ public:
 			count++;
 		}
 	}
-
+//method for serving patients
 	void ServePatient()
 	{
 		if (isEmpty())
@@ -67,7 +73,7 @@ public:
 		}
 
 		system("pause>nul");//Holds screen
-		system("cls");//Clear screen	
+		system("cls");//Clear screen
 	}
 
 	void CancelAll()
@@ -93,7 +99,7 @@ public:
 		system("pause>nul");//Holds screen
 		system("cls");//Clear screen
 		return;
-		
+
 	}
 
 	void ShowAllPatient()
@@ -128,7 +134,7 @@ public:
 		for (int i = front; i < rear; i++)
 		{
 			for (int j = front; j < rear - 1; j++)
-			{   
+			{
 				if (input[j] > input[j+1])
 				{
 					temp1 = input[j];
@@ -153,12 +159,12 @@ public:
 	}
 
 };
-
+//Main Starts here.
 void main()
 {
 	int s;
 	PatientRecord object;//object of the class
-	
+
 	do
 	{
 		cout << "Waiting Room Management System" << endl;
@@ -196,4 +202,4 @@ void main()
 
 	} while (1);
 
-}
+}//main ends
