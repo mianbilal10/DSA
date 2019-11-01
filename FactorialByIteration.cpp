@@ -1,3 +1,6 @@
+/* This program is writen is C++
+** It measures time taked to calculate N Factorial by Iteration approach
+** It displays time at the end in seconds*/
 #include <iostream>
 #include <ctime>
 
@@ -12,7 +15,7 @@ void iterative_factorial(int n)
 	}
 
 }
-
+//main starts
 void main()
 {
 	cout << "Calculating time for factorial" << endl;
@@ -32,17 +35,12 @@ void main()
 			cout << "\nTime Taken: "<<endl;
 
 			clock_t start, end;
-			start = clock();
-
+			start = clock();//time count starts
 			iterative_factorial(n);
-
-			end = clock();
+			end = clock();//time count ends
 			double time_taken = double(end - start) / CLOCKS_PER_SEC;
-			cout << " " << time_taken<<"";
+			cout << " " << time_taken<<"sec\n";
 
-			
 		}
-
 	}
-
-}
+}//main ends

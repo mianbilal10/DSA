@@ -1,3 +1,6 @@
+/* This program is writen is C++
+** It measures time taked to calculate N Fabonaccis by Iteration approach
+** It displays time at the end in seconds*/
 #include <iostream>
 #include <ctime>
 using namespace std;
@@ -15,7 +18,7 @@ void iterative_Fib(int n)
 
 }
 
-
+//Main starts
 void main()
 {
 	cout << "Calculating time for fabonacci series by iteration" << endl;
@@ -34,15 +37,12 @@ void main()
 		{
 			cout << "\nTime Taken: " << endl;
 			clock_t start, end;
-			start = clock();
-			iterative_Fib(n);
-			end = clock();
+			start = clock();//Time count starts
+			iterative_Fib(n);//method call
+			end = clock();//Time count ends
 			float time_taken = (float)(end - start) / CLOCKS_PER_SEC;
-			cout << "   " << time_taken<<" sec";
+			cout << "   " << time_taken<<" sec\n";
 
 		}
-
 	}
-
-
-}
+}//Main ends

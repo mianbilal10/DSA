@@ -1,3 +1,6 @@
+/* This program is writen is C++
+** It measures time taked to calculate N Fabonaccis by Recursion approach
+** It displays time at the end in seconds*/
 #include <iostream>
 #include <ctime>
 using namespace std;
@@ -9,7 +12,7 @@ long double recursive_Fib(int n)
 	return (recursive_Fib(n - 1) + recursive_Fib(n - 2));
 
 }
-
+//main starts
 void main()
 {
 	cout << "Calculating time for fabonacci series" << endl;
@@ -29,16 +32,13 @@ void main()
 			cout << "\nTime Taken: " << endl;
 
 			clock_t start, end;
-			start = clock();
+			start = clock();//time count starts
 			recursive_Fib(n);
-			end = clock();
+			end = clock();//time count ends
 
 			float time_taken = float(end - start) / CLOCKS_PER_SEC;
-			cout << " " << time_taken << endl << endl;
+			cout << " " << time_taken <<"sec\n";
 
 		}
-
 	}
-
-
-}
+}//main ends
