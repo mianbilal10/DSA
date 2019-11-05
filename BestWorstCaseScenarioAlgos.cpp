@@ -1,3 +1,5 @@
+//Implemetation of basic algorithms
+//And calculating their time complexity in Best as well as worst case Scenario
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -77,7 +79,7 @@ int main(){
 		cout << "___________________________________\n";
 
 		//function calls
-		sort(arr, arr + size);//ascending order
+		sort(arr, arr + size);//ascending order sorted
 		bubbleSort(arr, size);
 		insertionSort(arr, size);
 		selectionSort(arr, size);

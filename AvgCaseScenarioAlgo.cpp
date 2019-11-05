@@ -1,3 +1,5 @@
+//Implemetation of basic algorithms
+//And calculating their time complexity in Average case Scenario
 #include<iostream>
 #include<string>
 #include<algorithm>

@@ -1,9 +1,13 @@
+// Implementation of basic sorting algorithm
+//Including: bubbleSort, selectionSort, insertionSort
+
 #include<iostream>
 #include<string>
 #include<algorithm>
 
 using namespace std;
 
+// Implemetation of bubbleSort Algorithm
 void bubbleSort(int arr[], int n){
 
 	for (int i = n - 1; i >= 1; i--){
@@ -17,7 +21,7 @@ void bubbleSort(int arr[], int n){
 		cout << arr[m] << "  ";
 	cout << endl << endl;
 }
-
+//Implemetation of selectionSort algorithm
 void selectionSort(int arr[], int n){
 	for (int i = n - 1; i <= 0; i--){
 		int max = i;
@@ -33,7 +37,7 @@ void selectionSort(int arr[], int n){
 		cout << arr[m] << "  ";
 	cout << endl << endl;
 }
-
+//Implemetation of insertionSort algorithm
 void insertionSort(int arr[], int n){
 	for (int i = 1; i < n; i++){
 		int key = arr[i], j = i - 1;
@@ -48,7 +52,7 @@ void insertionSort(int arr[], int n){
 		cout << arr[m] << "  ";
 	cout << endl << endl;
 }
-
+// method for swaping two values through pointer variables
 void swap(int*a, int*b){
 	int temp;
 
@@ -57,13 +61,15 @@ void swap(int*a, int*b){
 	*a = temp;
 
 }
-
+//main starts
 int main(){
 
+//2D array for sorting
 	int a[3][8] = { { 3, 5, 7, 8, 1, 45, 13, 54 }, { 3, 5, 7, 8, 1, 45, 13, 54 }, { 3, 5, 7, 8, 1, 45, 13, 54 } };
 
+//call to functions
 	bubbleSort(a[0], 8);
 	selectionSort(a[1], 8);
 	insertionSort(a[2], 8);
 	return 1;
-}
+}//main ends
